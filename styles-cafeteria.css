@@ -1,0 +1,279 @@
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Body*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #b6b39a;
+    font-family: "Nanum Gothic", sans-serif;
+    color: #4a332d;
+    scroll-behavior: smooth;
+    scroll-padding: 100px;
+}
+
+.container {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Header*/
+.container-header {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 15px auto;
+    position: relative;
+    width: 90%;
+}
+
+.container-header .MENU {
+    margin: 0 auto;
+    flex-grow: 1; 
+    height: 10dvh;
+    text-align: center;
+    font-size: larger;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEF0E5;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    width: 60%;
+}
+
+.container-header button {
+    position: absolute; /* Posiciona el botón de manera absoluta */
+    left: 0; /* Fija el botón a la izquierda */
+    background-color: transparent;
+    border: none
+}
+.container-header button a i {
+    color: #4a332d;
+}
+
+@media (max-width: 768px) {
+    .container-header .MENU {
+        width: 80%; /* Ajusta el ancho del menú para pantallas pequeñas */
+    }
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Nav*/
+.container-nav {
+    overflow-x: hidden;
+    position: sticky;
+    top: 0;
+    font-family: sans-serif;
+}
+.scroll-container {
+    overflow-x: auto;
+    box-sizing: content-box;
+    padding: 5px;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.horizontal-list {
+    display: inline-flex; 
+    list-style-type: none;
+    padding: 0;
+    margin-left: 30px;
+}
+.horizontal-list li a {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #EEF0E5;
+    border-radius: 25px;
+    color: #4a332d;
+    text-decoration: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Main*/
+.container-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1dvh;
+}
+
+.seccion-productos {
+    background-color: #EEF0E5;
+    width: 90%;
+    border-radius: 12.5px;
+}
+
+.seccion-productos ul {
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none; 
+}
+
+.los-h2 {
+    width: 90%;
+    margin: 15px auto;
+    text-align: center;
+    padding: 5px 1vw;
+    border-bottom: 1px solid #b6b39a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.los-h4 {
+    width: 90%;
+    margin: 5px auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+
+.item {
+    width: 90%;
+    border: 1px solid #4a332d; /* Borde más suave */
+    margin: 10px auto; /* Espacio entre los items */
+    padding: 10px; /* Espacio interior */
+    display: grid;
+    grid-template-columns: auto 1fr; /* Dos columnas: imagen y contenido */
+    gap: 0 10px; /* Espacio entre columnas */
+    background-color: #EEF0E5; /* Fondo ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    align-items: center; /* Alineación vertical centrada */
+}
+
+
+.item h3 {
+    font-size: 1.2em; /* Tamaño de fuente */
+    color: #4a332d; /* Color de texto */
+    margin-left: 5px;
+    grid-column: 2; /* Asegura que el título esté en la segunda columna */
+}
+
+.item .descripcion {
+    grid-column: 2; /* Asegura que la descripción esté en la segunda columna */
+    font-size: 1em; /* Tamaño de fuente */
+    color: #4a332d; /* Color de texto */
+    margin-left: 5px;
+    margin-top: 5px; /* Espacio superior entre el título y la descripción */
+    margin-bottom: 0;
+    width: 75%;
+}
+
+.item .precio {
+    font-size: 1.2em; /* Tamaño de fuente */
+    font-weight: bold; /* Resalta el precio */
+    color: #4a332d; /* Color de texto */
+    text-align: right; /* Alineación derecha */
+    grid-column: 2; /* Precio en la segunda columna */
+    grid-row: 5;
+    align-self: end; /* Coloca el precio en la parte inferior */
+    justify-self: end; /* Alinea el precio a la derecha */
+    margin: 5px;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 600px) {
+    .item {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        grid-template-rows: auto; /* Tres filas: imagen, título, descripción */
+    }
+    
+    .item h3, .item .descripcion, .item .precio {
+        grid-column: 1; /* Asegurar que todo esté en la misma columna */
+    }
+
+    .item h3 {
+        grid-row: 1;
+        padding: 5px 0;
+        text-align: center;
+        margin: 0;
+    }
+    .item .precio {
+        grid-row: 3;
+        padding: 2px;
+        text-align: center;
+    }
+    .item .descripcion {
+        margin: 10px;
+        grid-row: 3;
+        text-align: left;
+    }
+}
+
+.volver {
+    width: 90%;
+    border: 1px solid #4a332d; /* Borde más suave */
+    margin: 20px auto 10px; /* Espacio entre los items */
+    padding: 10px; /* Espacio interior */
+    display: flex;
+    background-color: #4a332d; /* Fondo ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    align-items: center; /* Alineación vertical centrada */
+}
+
+.volver a {
+    text-decoration: none;
+    color: #EEF0E5;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:700;
+    font-size: larger;
+}
+
+.volver i {
+    color: #EEF0E5;
+}
+
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*Footer*/
+.container-footer {
+    width: auto;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-top: 1dvh;
+}
+
+.container-footer img {
+    height: 5vh;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+.container-footer p {
+    margin-top: 5px;
+}
+.container-footer .img .estado-del-mar {
+    border-radius: 25px;
+}
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*barra de scroll, */
+/* Estilos específicos para navegadores WebKit (Chrome, Safari, etc.) */
+.scroll-container::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento vertical */
+    height: 8px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #4a332d; /* Color de la "thumb" */
+    border-radius: 10px; /* Bordes redondeados para la "thumb" */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background-color: transparent; /* Fondo transparente para la pista */
+}
+
+.scroll-container::-webkit-scrollbar-button {
+    display: none; /* Oculta las flechas de desplazamiento en las esquinas */
+}
