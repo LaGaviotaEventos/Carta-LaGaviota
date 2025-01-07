@@ -125,6 +125,11 @@ html, body {
     justify-content: center;
 }
 
+.h3fit {
+    text-aling: center;
+    
+}
+
 .los-h4 {
     width: 90%;
     margin: 5px auto;
