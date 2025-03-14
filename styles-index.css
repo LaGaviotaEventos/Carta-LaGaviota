@@ -7,44 +7,43 @@ html, body {
     font-family: "Nanum Gothic", sans-serif;
     color: #4a332d;
 }
-
 .container {
-    min-height: 100%;
+    min-height: 100dvh;
     display: grid;
-    grid-template-rows: auto auto 1fr auto; /* Ajustamos las filas para que el main ocupe el espacio restante */
+    grid-template-rows: auto auto auto 1fr auto;
     max-width: 700px;
     margin: 0 auto;
 }
-
 /*///////////////////////////////////////////////////////////////////////////*/
 /*header*/
 .container-header {
     margin: 0 auto;
+    margin-top: 1dvh;
+    height: 10dvh;
+    width: 90%;
     padding: 5px 0;
+    top: 0;
     background-color: #EEF0E5;
     display: flex;
     justify-content: center;
     border-bottom: 1px solid #4a332d;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    min-height: 10dvh; /* Cambié height por min-height para que ajuste dinámicamente */
 }
 
 .Titulo {
     margin: 0 auto;
-    height: auto; /* Permite que el h1 se ajuste a su contenido */
+    height: 7dvh;
     width: 90%;
     background-color: #EEF0E5;
     justify-content: center;
     align-content: center;
-    padding-top: 2dvh; /* Agregado espacio para que no quede pegado a la parte superior */
 }
 
 .Titulo h1 {
     text-align: center;
     font-size: 7dvi;
 }
-
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 /*nav*/
 .container-nav {
@@ -57,19 +56,16 @@ html, body {
     align-items: center;
     border-bottom: 1px solid #4a332d;
 }
-
 .container-nav ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none; 
 }
-
 .container-nav a {
     color: #EEF0E5;
     text-decoration: none;
     margin: 0 2vw;
 }
-
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 /*Main*/
 .container-main {
@@ -78,8 +74,6 @@ html, body {
     margin: 0 auto;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    overflow-y: auto;
-    padding-bottom: 2dvh; /* Agregado espacio en la parte inferior para evitar que se tape el footer */
 }
 
 .container-main ul {
@@ -95,7 +89,7 @@ html, body {
     background-color: #EEF0E5;
     display: flex;
     width: 90%;
-    margin: 3dvh auto;
+    margin: 3dvh auto; /* Agrega margen vertical para espaciado */
     padding: 3dvh 3dvw;
     justify-content: center;
     align-items: center;
@@ -103,9 +97,10 @@ html, body {
     border: 1px solid #4a332d;
     box-shadow: 8px 8px 18px #898989,
     -8px -8px 18px #EEF0E5;
-    box-sizing: border-box;
-    height: auto;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    height: auto; /* Ajusta la altura al contenido */
 }
+
 
 .container-main a {
     color: #4a332d;
@@ -117,8 +112,8 @@ html, body {
     text-shadow: 28px 28px 56px #898989,
     -28px -28px 56px #ffffff;
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centra en el eje X */
+    align-items: center; /* Centra en el eje Y */
     height: 100%;
     width: 100%;
     box-sizing: border-box;
@@ -129,6 +124,9 @@ html, body {
         font-size: 5dvh;
     }
 }
+
+
+
 
 /*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 /*Footer*/
@@ -144,11 +142,9 @@ html, body {
     margin-top: 1vh;
     margin-left: 1vw;
 }
-
 .container-footer p {
     margin-top: 5px;
 }
-
 .container-footer .img .estado-del-mar {
     border-radius: 15px;
 }
